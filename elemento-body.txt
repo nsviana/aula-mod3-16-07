@@ -1,0 +1,22 @@
+body: ListView.builder(
+        itemCount: livros.length,
+        itemBuilder: (context, index) => InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/segunda');
+            },
+            child: Card(
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.transparent,
+                child: Center(
+                  child: Expanded(
+                    child: Text(
+                      livros[index].titulo!,
+                      style: const TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+              ),
+            )),
+      ),
